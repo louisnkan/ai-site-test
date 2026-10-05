@@ -1,32 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Shell and Soil Farms — a beginner snail farming project based in Port Harcourt, Rivers State, Nigeria."
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shell and Soil Farms — a new snail farming venture in Port Harcourt, Rivers State, Nigeria.">
   <title>Shell and Soil Farms | Port Harcourt, Nigeria</title>
 
   <style>
     :root {
-      --forest: #234d35;
-      --deep-green: #173b28;
-      --leaf: #477a4f;
-      --sage: #8da889;
+      --forest: #1f4d35;
+      --deep-green: #143c29;
+      --leaf: #4f7d45;
+      --sage: #dce8d5;
+      --cream: #f7f3e8;
       --earth: #8a6848;
-      --soil: #5f4935;
-      --cream: #f5f1e6;
-      --paper: #fffdf7;
-      --soft-green: #e5eee2;
-      --border: #d8dfd2;
-      --text: #26342a;
-      --muted: #647066;
+      --dark: #203027;
       --white: #ffffff;
-      --shadow: 0 12px 35px rgba(31, 61, 40, 0.08);
-      --radius: 18px;
-      --max-width: 1080px;
+      --border: #d7dfd0;
+      --shadow: 0 10px 30px rgba(31, 77, 53, 0.08);
     }
 
     * {
@@ -40,10 +31,9 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
-      color: var(--text);
+      color: var(--dark);
       background: var(--cream);
     }
 
@@ -53,21 +43,21 @@
     }
 
     .container {
-      width: min(100% - 32px, var(--max-width));
+      width: min(92%, 1100px);
       margin-inline: auto;
     }
 
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(245, 241, 230, 0.96);
+      z-index: 10;
+      background: rgba(247, 243, 232, 0.96);
       border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(8px);
     }
 
     .nav {
-      min-height: 70px;
+      min-height: 68px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -75,89 +65,59 @@
     }
 
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
       font-weight: 800;
       color: var(--forest);
+      font-size: 1.05rem;
       letter-spacing: -0.02em;
     }
 
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--forest);
-      color: var(--cream);
-      font-size: 20px;
-    }
-
-    nav {
+    .nav-links {
       display: none;
-      gap: 22px;
-      font-size: 0.92rem;
-      font-weight: 650;
-      color: var(--muted);
-    }
-
-    nav a:hover {
+      gap: 20px;
+      font-size: 0.9rem;
       color: var(--forest);
+      font-weight: 600;
     }
 
     .hero {
-      padding: 72px 0 80px;
+      padding: 72px 0 64px;
       background:
-        radial-gradient(circle at 90% 15%, rgba(141, 168, 137, 0.25), transparent 32%),
-        linear-gradient(180deg, var(--soft-green), var(--cream));
+        radial-gradient(circle at 90% 15%, rgba(79, 125, 69, 0.13), transparent 28%),
+        linear-gradient(180deg, var(--sage), var(--cream));
     }
 
     .hero-content {
-      max-width: 760px;
+      max-width: 720px;
     }
 
     .eyebrow {
       display: inline-block;
-      margin-bottom: 18px;
-      padding: 7px 12px;
+      margin-bottom: 14px;
+      padding: 6px 11px;
+      border: 1px solid rgba(31, 77, 53, 0.18);
       border-radius: 999px;
-      background: rgba(71, 122, 79, 0.12);
       color: var(--forest);
+      background: rgba(255, 255, 255, 0.45);
       font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
+      font-weight: 700;
       text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     h1 {
       max-width: 700px;
-      margin-bottom: 20px;
       color: var(--deep-green);
-      font-size: clamp(2.5rem, 11vw, 5rem);
+      font-size: clamp(2.6rem, 11vw, 5.2rem);
       line-height: 0.98;
       letter-spacing: -0.055em;
+      margin-bottom: 22px;
     }
 
     .hero p {
       max-width: 650px;
-      margin-bottom: 28px;
-      color: var(--muted);
       font-size: 1.08rem;
-    }
-
-    .hero-note {
-      margin-top: 18px;
-      padding-left: 14px;
-      border-left: 3px solid var(--earth);
-      color: var(--soil);
-      font-size: 0.95rem;
-    }
-
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+      color: #3d5144;
+      margin-bottom: 28px;
     }
 
     .button {
@@ -165,15 +125,15 @@
       align-items: center;
       justify-content: center;
       min-height: 48px;
-      padding: 12px 18px;
-      border-radius: 12px;
-      border: 1px solid transparent;
+      padding: 12px 20px;
+      border-radius: 10px;
       font-weight: 750;
-      transition: transform 0.2s ease, background 0.2s ease;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
     .button:hover {
       transform: translateY(-2px);
+      opacity: 0.92;
     }
 
     .button-primary {
@@ -181,376 +141,343 @@
       color: var(--white);
     }
 
-    .button-primary:hover {
-      background: var(--deep-green);
-    }
-
     .button-secondary {
-      border-color: var(--forest);
-      color: var(--forest);
       background: transparent;
+      color: var(--forest);
+      border: 1px solid var(--forest);
     }
 
     section {
-      padding: 72px 0;
+      padding: 68px 0;
     }
 
     .section-heading {
       max-width: 680px;
-      margin-bottom: 32px;
+      margin-bottom: 34px;
     }
 
     .section-label {
-      display: block;
-      margin-bottom: 9px;
       color: var(--leaf);
       font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.1em;
       text-transform: uppercase;
+      margin-bottom: 8px;
     }
 
     h2 {
-      margin-bottom: 12px;
       color: var(--deep-green);
-      font-size: clamp(2rem, 7vw, 3rem);
+      font-size: clamp(2rem, 8vw, 3.2rem);
       line-height: 1.05;
       letter-spacing: -0.04em;
+      margin-bottom: 14px;
     }
 
     .section-heading p {
-      color: var(--muted);
+      color: #526158;
+    }
+
+    .about {
+      background: var(--white);
     }
 
     .about-grid {
       display: grid;
-      gap: 20px;
+      gap: 24px;
     }
 
-    .card {
+    .about-card {
       padding: 26px;
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--paper);
+      border-radius: 16px;
+      background: var(--cream);
+    }
+
+    .about-card h3 {
+      color: var(--forest);
+      margin-bottom: 8px;
+      font-size: 1.15rem;
+    }
+
+    .about-card p {
+      color: #526158;
+    }
+
+    .plans {
+      background: var(--cream);
+    }
+
+    .plan-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .plan-card {
+      padding: 24px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
       box-shadow: var(--shadow);
     }
 
-    .card h3 {
-      margin-bottom: 10px;
+    .plan-number {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      border-radius: 50%;
+      background: var(--sage);
       color: var(--forest);
-      font-size: 1.2rem;
+      font-weight: 800;
     }
 
-    .card p {
-      color: var(--muted);
+    .plan-card h3 {
+      color: var(--forest);
+      margin-bottom: 7px;
     }
 
-    .honest-note {
-      border-left: 4px solid var(--earth);
-      background: #f1e8da;
+    .plan-card p {
+      color: #59665d;
     }
 
-    .offer-section {
+    .contact {
       background: var(--deep-green);
       color: var(--white);
     }
 
-    .offer-section h2,
-    .offer-section .section-heading p {
+    .contact h2 {
       color: var(--white);
     }
 
-    .offer-section .section-label {
-      color: #b8d2ad;
+    .contact-intro {
+      max-width: 650px;
+      color: #d8e4db;
+      margin-bottom: 28px;
     }
 
-    .offers {
+    .contact-grid {
       display: grid;
-      gap: 16px;
-    }
-
-    .offer {
-      padding: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.07);
-    }
-
-    .offer-number {
-      display: inline-grid;
-      width: 34px;
-      height: 34px;
-      margin-bottom: 16px;
-      place-items: center;
-      border-radius: 50%;
-      background: #d9e7d2;
-      color: var(--deep-green);
-      font-weight: 800;
-    }
-
-    .offer h3 {
-      margin-bottom: 8px;
-      font-size: 1.12rem;
-    }
-
-    .offer p {
-      color: #d8e2d8;
-    }
-
-    .contact-wrap {
-      display: grid;
-      gap: 24px;
-    }
-
-    .contact-card {
-      padding: 28px;
-      border-radius: var(--radius);
-      background: var(--paper);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .contact-list {
-      display: grid;
-      gap: 16px;
-      margin: 22px 0 26px;
+      gap: 14px;
+      margin-bottom: 28px;
     }
 
     .contact-item {
-      display: grid;
-      gap: 3px;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
     }
 
     .contact-item strong {
-      color: var(--forest);
-      font-size: 0.85rem;
+      display: block;
+      color: #bcd3bf;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
     }
 
-    .placeholder {
-      color: var(--earth);
-      font-weight: 650;
+    .contact-item span {
+      color: var(--white);
     }
 
     footer {
-      padding: 28px 0;
-      background: #10291c;
-      color: #cbd8cd;
-      font-size: 0.88rem;
-    }
-
-    footer .footer-inner {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+      padding: 24px 0;
+      background: #102d20;
+      color: #b9cabe;
+      font-size: 0.85rem;
+      text-align: center;
     }
 
     @media (min-width: 700px) {
-      .container {
-        width: min(100% - 48px, var(--max-width));
-      }
-
-      nav {
+      .nav-links {
         display: flex;
       }
 
       .hero {
-        padding: 110px 0 120px;
+        padding: 110px 0 100px;
       }
 
-      .about-grid {
-        grid-template-columns: 1.3fr 0.7fr;
+      .about-grid,
+      .plan-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .offers {
+      .contact-grid {
         grid-template-columns: repeat(3, 1fr);
       }
+    }
 
-      .contact-wrap {
+    @media (min-width: 950px) {
+      .about-grid {
         grid-template-columns: 1.2fr 0.8fr;
-        align-items: start;
       }
 
-      footer .footer-inner {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+      .plan-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   </style>
 </head>
 
 <body>
+
   <header>
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="Shell and Soil Farms home">
-        <span class="brand-mark" aria-hidden="true">🐌</span>
-        <span>Shell and Soil Farms</span>
-      </a>
+      <a class="brand" href="#top">Shell and Soil Farms</a>
 
-      <nav aria-label="Main navigation">
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="#about">About</a>
-        <a href="#offer">What We Plan to Offer</a>
+        <a href="#plans">What We Plan to Offer</a>
         <a href="#contact">Reach Us</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
+
     <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <span class="eyebrow">Port Harcourt · Rivers State · Nigeria</span>
+      <div class="container hero-content">
+        <span class="eyebrow">A new snail farm in Port Harcourt</span>
 
-          <h1>Growing slowly. Starting honestly.</h1>
+        <h1>Growing from the soil, one shell at a time.</h1>
 
-          <p>
-            Shell and Soil Farms is a small snail farming project taking shape
-            in Port Harcourt. We are at the beginning of the journey, learning
-            and preparing to build a responsible farm from the ground up.
-          </p>
+        <p>
+          Welcome to Shell and Soil Farms, a small snail farming venture
+          preparing to get started in Port Harcourt, Rivers State, Nigeria.
+          We are at the beginning of our journey and are learning, planning,
+          and preparing carefully for the farm ahead.
+        </p>
 
-          <div class="button-row">
-            <a class="button button-primary" href="#about">Our Story</a>
-            <a class="button button-secondary" href="#contact">Reach Us</a>
-          </div>
-
-          <p class="hero-note">
-            We are beginners and have not started snail farming yet. This
-            website reflects our plans, not an established farm or current
-            production.
-          </p>
-        </div>
+        <a class="button button-primary" href="#contact">
+          How to reach us
+        </a>
       </div>
     </section>
 
-    <section id="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="section-heading">
-          <span class="section-label">About us</span>
-          <h2>A small beginning with room to grow.</h2>
+          <div class="section-label">About us</div>
+          <h2>We are just getting started.</h2>
           <p>
-            Shell and Soil Farms is being created by a beginner with an
-            interest in learning snail farming and developing a practical
-            small-scale agricultural project in Port Harcourt.
+            Shell and Soil Farms is a beginner-led snail farming project based
+            in Port Harcourt. We have not started farming yet, and we want to
+            be open about that as we build the foundation for the farm.
           </p>
         </div>
 
         <div class="about-grid">
-          <article class="card">
-            <h3>Where we are now</h3>
+          <article class="about-card">
+            <h3>Learning first</h3>
             <p>
-              We are currently in the preparation and learning stage. We have
-              not started raising snails yet, so we are not presenting
-              ourselves as an established farm.
+              Our current focus is learning about responsible snail farming,
+              preparing our environment, and putting practical systems in
+              place before we begin.
             </p>
           </article>
 
-          <article class="card honest-note">
-            <h3>Our approach</h3>
+          <article class="about-card">
+            <h3>Building patiently</h3>
             <p>
-              Start carefully, learn continuously, prepare the farm properly,
-              and grow at a sustainable pace as experience develops.
+              We plan to grow Shell and Soil Farms step by step, with attention
+              to good farm practices, healthy stock, and sustainable growth.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="offer-section" id="offer">
+    <section class="plans" id="plans">
       <div class="container">
         <div class="section-heading">
-          <span class="section-label">What we plan to offer</span>
-          <h2>Future plans, built one step at a time.</h2>
+          <div class="section-label">Our plans</div>
+          <h2>What we plan to offer</h2>
           <p>
-            These are planned areas for the farm as the project develops. They
-            are not currently available for purchase.
+            These are plans for the future, not current offerings. As the farm
+            develops, we will update this page with what is actually available.
           </p>
         </div>
 
-        <div class="offers">
-          <article class="offer">
-            <span class="offer-number">1</span>
+        <div class="plan-grid">
+          <article class="plan-card">
+            <span class="plan-number">1</span>
             <h3>Farm-raised snails</h3>
             <p>
-              In the future, we plan to raise healthy snails using a carefully
-              prepared and managed farm environment.
+              We plan to raise snails on our farm and make them available when
+              production is established.
             </p>
           </article>
 
-          <article class="offer">
-            <span class="offer-number">2</span>
-            <h3>Fresh snail supply</h3>
+          <article class="plan-card">
+            <span class="plan-number">2</span>
+            <h3>Future farm products</h3>
             <p>
-              As production develops, we hope to provide locally raised snails
-              to customers in and around Port Harcourt.
+              We may introduce other snail-farming products as the farm grows
+              and we are ready to offer them responsibly.
             </p>
           </article>
 
-          <article class="offer">
-            <span class="offer-number">3</span>
-            <h3>Learning and growth</h3>
+          <article class="plan-card">
+            <span class="plan-number">3</span>
+            <h3>Our farming journey</h3>
             <p>
-              We intend to keep learning about snail farming and improve our
-              practices as the farm moves from planning into production.
+              We also plan to share updates as we move from preparation to
+              starting and developing the farm.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <section class="contact" id="contact">
       <div class="container">
-        <div class="contact-wrap">
-          <div class="section-heading">
-            <span class="section-label">How to reach us</span>
-            <h2>Let’s connect as the farm takes shape.</h2>
-            <p>
-              For questions, future enquiries, or to follow our progress,
-              please use the contact details below.
-            </p>
+        <div class="section-heading">
+          <div class="section-label">How to reach us</div>
+          <h2>Let’s stay connected.</h2>
+          <p class="contact-intro">
+            Shell and Soil Farms is still preparing to begin. For questions,
+            future enquiries, or to follow our journey, use the contact details
+            below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <strong>Location</strong>
+            <span>Port Harcourt, Rivers State, Nigeria</span>
           </div>
 
-          <div class="contact-card">
-            <div class="contact-list">
-              <div class="contact-item">
-                <strong>Location</strong>
-                <span>Port Harcourt, Rivers State, Nigeria</span>
-              </div>
+          <div class="contact-item">
+            <strong>Phone</strong>
+            <span>[Add phone number]</span>
+          </div>
 
-              <div class="contact-item">
-                <strong>Phone</strong>
-                <span class="placeholder">[Add phone number]</span>
-              </div>
-
-              <div class="contact-item">
-                <strong>Email</strong>
-                <span class="placeholder">[Add email address]</span>
-              </div>
-
-              <div class="contact-item">
-                <strong>Business hours</strong>
-                <span class="placeholder">[Add business hours]</span>
-              </div>
-            </div>
-
-            <a
-              class="button button-primary"
-              href="#"
-              aria-label="Contact Shell and Soil Farms on WhatsApp"
-            >
-              WhatsApp Us
-            </a>
+          <div class="contact-item">
+            <strong>Email</strong>
+            <span>[Add email address]</span>
           </div>
         </div>
+
+        <a
+          class="button button-primary"
+          href="#"
+          aria-label="Contact Shell and Soil Farms on WhatsApp"
+        >
+          WhatsApp us
+        </a>
       </div>
     </section>
+
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <span>© 2026 Shell and Soil Farms</span>
-      <span>Port Harcourt, Rivers State, Nigeria</span>
+    <div class="container">
+      &copy; 2026 Shell and Soil Farms. Port Harcourt, Rivers State, Nigeria.
     </div>
   </footer>
+
 </body>
 </html>
