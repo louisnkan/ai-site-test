@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shell and Soil Farms | Port Harcourt</title>
+    <style>
+        /* Base / Mobile-First Styles */
+        :root {
+            --primary-green: #2e5a27;
+            --secondary-green: #4a7c43;
+            --earth-brown: #8b5a2b;
+            --bg-color: #f9f8f4;
+            --text-dark: #2c2c2c;
+            --text-light: #ffffff;
+            --whatsapp-green: #25D366;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background-color: var(--primary-green);
+            color: var(--text-light);
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 8px solid var(--earth-brown);
+        }
+
+        header h1 {
+            color: var(--text-light);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+            color: #dcedd9;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 0;
+            border-bottom: 1px solid #e2dfd5;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--earth-brown);
+            margin: 10px auto 0;
+        }
+
+        /* Lists */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            background-color: #ffffff;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-left: 5px solid var(--secondary-green);
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Contact Details */
+        .contact-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .contact-detail {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .contact-label {
+            font-weight: bold;
+            color: var(--earth-brown);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--whatsapp-green);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1ebe57;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Desktop Adjustments */
+        @media (min-width: 768px) {
+            header {
+                padding: 100px 20px;
+            }
+            
+            header h1 {
+                font-size: 3rem;
+            }
+
+            .whatsapp-btn {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header>
+        <div class="container">
+            <h1>Shell and Soil Farms</h1>
+            <p>Based in Port Harcourt, Rivers State, Nigeria</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <p>Welcome to Shell and Soil Farms! We are a newly established agricultural venture located right here in Port Harcourt. To be completely honest, we have not officially started operations yet.</p>
+            <p>As a beginner with a deep passion for agriculture and sustainable practices, I am currently taking the time to learn, plan, and build this snail farm from the ground up. We believe in transparency, and while our pens are currently empty as we prepare the soil and habitat, we are incredibly excited about the journey ahead.</p>
+        </div>
+    </section>
+
+    <!-- What We Plan to Offer Section -->
+    <section id="offerings">
+        <div class="container">
+            <h2 class="section-title">What We Plan to Offer</h2>
+            <p>Once our farm is fully set up and our snails have grown in a healthy, organic environment, we plan to provide the local community with:</p>
+            <ul>
+                <li><strong>Live Farm-Fresh Snails:</strong> Healthy, organically raised snails direct from our soil to you.</li>
+                <li><strong>Processed Snails:</strong> Cleaned, washed, and packaged snails ready for your pot, saving you preparation time.</li>
+                <li><strong>Snail Shells:</strong> Cleaned shells for local crafts, calcium supplementation for animal feed, or gardening uses.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- How to Reach Us Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">How to Reach Us</h2>
+            <p style="text-align: center;">Interested in following our startup journey or getting in touch for future orders? We would love to hear from you!</p>
+            
+            <div class="contact-card">
+                <div class="contact-detail">
+                    <span class="contact-label">Location</span>
+                    Port Harcourt, Rivers State, Nigeria
+                </div>
+                
+                <div class="contact-detail">
+                    <span class="contact-label">Phone Call / SMS</span>
+                    [Add phone number]
+                </div>
+                
+                <div class="contact-detail">
+                    <span class="contact-label">Email Address</span>
+                    [Add email address]
+                </div>
+
+                <a href="#" class="whatsapp-btn">
+                    Chat with us on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Shell and Soil Farms. Growing from the ground up.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
